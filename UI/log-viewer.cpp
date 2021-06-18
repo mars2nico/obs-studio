@@ -118,6 +118,13 @@ void OBSLogViewer::InitLog()
 
 void OBSLogViewer::AddLine(int type, const QString &str)
 {
+#if 1
+#if 0
+	if (!isVisible())
+#endif
+		return;
+#endif
+
 	QString msg = str.toHtmlEscaped();
 
 	switch (type) {
